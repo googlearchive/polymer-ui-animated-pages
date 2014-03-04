@@ -109,8 +109,8 @@ license that can be found in the LICENSE file.
           // FIXME: Both 'from' and 'to' items must be visible and have the
           // default z-index. Overrides the class styles. Can be removed if
           // the polymer-animation-start event is working.
-          new Animation(from, [{'visibility': 'visible', 'z-index': 'auto'}]),
-          new Animation(to, [{'visibility': 'visible', 'z-index': 'auto'}])
+          new Animation(from, [{'visibility': 'visible', 'z-index': 'auto'}], {fill: "forwards"}),
+          new Animation(to, [{'visibility': 'visible', 'z-index': 'auto'}], {fill: "forwards"})
         ], {
           fill: 'none',
           direction: direction
