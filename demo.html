@@ -28,7 +28,7 @@ license that can be found in the LICENSE file.
   <body class="polymer-ui-body-text polymer-ui-full-bleed polymer-ui-light-bg" unresolved>
     <polymer-element name="transition-hslide-scale-out" extends="polymer-animation-group" noscript>
       <template>
-        <polymer-animation id="scale-out" duration="0.5">
+        <polymer-animation id="scale-out" duration="500">
           <polymer-animation-keyframe>
             <polymer-animation-prop name="transform" value="scale(1)"></polymer-animation-prop>
           </polymer-animation-keyframe>
@@ -36,7 +36,7 @@ license that can be found in the LICENSE file.
             <polymer-animation-prop name="transform" value="scale(0.8)"></polymer-animation-prop>
           </polymer-animation-keyframe>
         </polymer-animation>
-        <polymer-animation id="hslide-in" duration="0.5">
+        <polymer-animation id="hslide-in" duration="500">
           <polymer-animation-keyframe>
             <polymer-animation-prop name="transform" value="translateX(100%)"></polymer-animation-prop>
           </polymer-animation-keyframe>
@@ -179,7 +179,7 @@ license that can be found in the LICENSE file.
           page: 0,
           directional: true,
           transitionIsString: false,
-          duration: 0.5,
+          duration: 500,
           transitionInIndex: 2,
           transitionOutIndex: 2,
           observe: {
