@@ -77,7 +77,8 @@ license that can be found in the LICENSE file.
       applyTransition: function() {
         if (this.prevSelectedItem) {
           this.animation = this.makeTransitionAnimation();
-          document.timeline.play(this.animation);
+          var player = document.timeline.play(this.animation);
+          player.onfinish = this.animationEndAction.bind(this);
           // Apply the class after the animation starts playing to prevent
           // a flicker at the end of the animation.
           this.async(function() {
@@ -115,7 +116,6 @@ license that can be found in the LICENSE file.
           fill: 'none',
           direction: direction
         });
-        animation.onend = this.animationEndAction.bind(this);
         return animation;
       },
       selectedItemChanged: function(oldItem) {
